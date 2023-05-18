@@ -14,6 +14,10 @@
   font-family: "Unbutu";
   color: black;
 }
+li {
+  list-style: none;
+  margin-right: 20px;
+}
 
 h1 {
   font-family: "Shojumaru";
@@ -30,7 +34,7 @@ h1 {
 .main {
   background-color: #ffd920;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 ::-webkit-scrollbar {
@@ -43,7 +47,8 @@ h1 {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
+  bottom: 0;
   height: 100%;
   background-color: rgb(249, 218, 80);
   z-index: 9999;
@@ -55,7 +60,6 @@ h1 {
 }
 
 .loader {
-  --dim: 3rem;
   width: var(--dim);
   height: var(--dim);
   position: relative;
@@ -141,19 +145,10 @@ h1 {
   box-shadow: 0px 0px 15px black;
   background-color: black;
 }
-.sticky-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 90;
-  /* Các thuộc tính khác cho giao diện header */
-}
 
 body {
   height: 100vh;
   width: 100%;
-  overflow: hidden;
 }
 
 .logo {
@@ -297,9 +292,6 @@ a.nav-link:hover {
     margin: 0 auto;
     background-color: #ffd920;
   }
-  .home .bg img {
-    object-fit: cover;
-  }
 
   .nav-menu li {
     padding: 10px 0;
@@ -327,17 +319,14 @@ a.nav-link:hover {
   position: relative;
   margin-bottom: 4vw;
   width: 100%;
-  height: 100vh;
 }
 
-.home .bg img {
+.home .bg {
   position: absolute;
   top: 0;
   left: 0;
-  width: 800px;
   margin-top: 50px;
   height: auto;
-  overflow: hidden;
   opacity: 0.25;
 }
 
@@ -376,6 +365,12 @@ a.nav-link:hover {
   width: 4vw;
 }
 
+.list_link .icon img:hover {
+  transform: translateY(-10px);
+  transition: 0.5s ease-in-out;
+}
+
+/* Giao dien mobile */
 @media (max-width: 767px) {
   .home {
     text-align: center;
@@ -399,11 +394,9 @@ a.nav-link:hover {
     display: none;
   }
   .home .bg img {
-    width: 450px;
     position: absolute;
     top: 2%;
-  right: 20%;
-  overflow: hidden;
+    right: 0%;
   }
 }
 
@@ -459,12 +452,8 @@ a.nav-link:hover {
   }
 }
 
+
 /* HOME END */
-/* 
-.nav_content{
-    background-color: black;
-    height: 10px;
-} */
 
 h1 {
   font-weight: 700;
@@ -509,7 +498,7 @@ h1 {
 }
 
 .buy {
-  padding: 13vw 0 0 0 ;
+  padding: 13vw 0 0 0;
 }
 
 .buy .item_buy {
@@ -571,7 +560,7 @@ h1 {
 /* BUY END */
 
 .token {
-  padding-top:13vw;
+  padding-top: 13vw;
   margin: -5vw auto 2vw auto;
 }
 
@@ -617,8 +606,8 @@ h1 {
   }
 }
 
-.roadmap{
-  padding-top:13vw;
+.roadmap {
+  padding-top: 13vw;
   margin: -5vw auto 2vw auto;
 }
 
